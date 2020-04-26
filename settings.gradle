@@ -1,0 +1,2 @@
+rootProject.name='GitHubIssueList'
+include ':app'
