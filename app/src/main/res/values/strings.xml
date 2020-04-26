@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GitHubIssueList</string>
+    <string name="no_breeds_were_returned">No breeds were returned.</string>
 </resources>
