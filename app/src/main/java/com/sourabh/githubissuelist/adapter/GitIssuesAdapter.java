@@ -69,7 +69,6 @@ public class GitIssuesAdapter extends RecyclerView.Adapter<GitIssuesAdapter.Gene
         }
 
         void bind(HomeScreenViewModel viewModel, Integer position) {
-//            viewModel.fetchDogBreedImagesAt(position);
             binding.setViewModel(viewModel);
             binding.setPosition(position);
             binding.executePendingBindings();

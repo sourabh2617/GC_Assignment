@@ -32,7 +32,7 @@
             android:paddingStart="12dp"
             android:paddingEnd="32dp"
             android:backgroundTint="@color/colorAccent"
-            android:text="@{viewModel.getDogBreedAt(position).title}"
+            android:text="@{viewModel.getGitIssueAt(position).title}"
             android:textSize="18sp"
             android:textStyle="bold"
             tools:text="Test" />
@@ -45,7 +45,7 @@
             android:paddingStart="32dp"
             android:paddingEnd="32dp"
             android:backgroundTint="@color/colorAccent"
-            android:text="@{viewModel.getDogBreedAt(position).body}"
+            android:text="@{viewModel.getGitIssueAt(position).body}"
             android:textSize="16sp"
             android:maxLength="140"
             android:ellipsize="end"

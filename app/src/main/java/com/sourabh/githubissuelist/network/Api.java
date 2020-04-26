@@ -24,17 +24,11 @@ public class Api {
                     .addInterceptor(logging)
                     .build();
 
-//            Gson gson = new GsonBuilder()
-//                    .registerTypeAdapter(
-//                            GitIssues.class,
-//                            new JsonDogBreedsDeserializer())
-//                    .create();
 
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .client(client)
                     .addConverterFactory(GsonConverterFactory.create())
-                    //                    .addConverterFactory(GsonConverterFactory.create(gson))
                     .build();
 
             api = retrofit.create(ApiInterface.class);
@@ -46,8 +40,6 @@ public class Api {
         @GET("repos/firebase/firebase-ios-sdk/issues")
         Call<List<GitIssue>> getGitIssuesApi();
 
-//        @GET("/api/breed/{breed}/images")
-//        Call<DogBreedImages> getImagesByBreed(@Path("breed") String breed);
 
     }
 }
