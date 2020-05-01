@@ -13,11 +13,11 @@ import retrofit2.http.GET;
 
 public class Api {
 
-    private static ApiInterface api;
+    private static ApiInterface apiInterface;
     private static final String BASE_URL = "https://api.github.com/";
 
-    public static ApiInterface getApi() {
-        if (api == null) {
+    public static ApiInterface getApiInterface() {
+        if (apiInterface == null) {
             HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
             logging.setLevel(HttpLoggingInterceptor.Level.BASIC);
             OkHttpClient client = new OkHttpClient.Builder()
@@ -31,9 +31,9 @@ public class Api {
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 
-            api = retrofit.create(ApiInterface.class);
+            apiInterface = retrofit.create(ApiInterface.class);
         }
-        return api;
+        return apiInterface;
     }
 
     public interface ApiInterface {
