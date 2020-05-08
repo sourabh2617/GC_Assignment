@@ -33,6 +33,6 @@ public class Repository extends BaseObservable {
                 Log.e("Test", t.getMessage(), t);
             }
         };
-        Api.getApiInterface().getGitIssuesApi().enqueue(callback);
+        Api.getApi().getGitIssuesApi().enqueue(callback);
     }
 }
